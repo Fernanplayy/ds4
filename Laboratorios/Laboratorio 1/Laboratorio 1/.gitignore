@@ -1,0 +1,7 @@
+# Ignorar Visual Studio
+.vs/
+*.vsidx
+
+# Ignorar compilados
+bin/
+obj/
