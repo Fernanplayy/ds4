@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\PC-Personal\\.nuget\\packages\\": {},
+    "C:\\Users\\ferna\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC-Personal\\source\\repos\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 2\\Laboratorio 2\\Laboratorio 2.csproj",
+      "projectUniqueName": "C:\\Users\\ferna\\source\\repos\\Fernanplayy\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 21\\Laboratorio 2\\Laboratorio 2.csproj",
       "projectName": "Laboratorio 2",
-      "projectPath": "C:\\Users\\PC-Personal\\source\\repos\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 2\\Laboratorio 2\\Laboratorio 2.csproj",
-      "packagesPath": "C:\\Users\\PC-Personal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC-Personal\\source\\repos\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 2\\Laboratorio 2\\obj\\",
+      "projectPath": "C:\\Users\\ferna\\source\\repos\\Fernanplayy\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 21\\Laboratorio 2\\Laboratorio 2.csproj",
+      "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ferna\\source\\repos\\Fernanplayy\\ds4\\Laboratorios\\Laboratorio 2\\Laboratorio 21\\Laboratorio 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PC-Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
