@@ -1,0 +1,23 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num;
+
+        Console.Write("Digite el numero deseado: ");
+
+        try
+        {
+            num = Int16.Parse(Console.ReadLine());
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("No ha introducido un digito valido");
+            num = -1;
+        }
+
+        Console.WriteLine(num);
+    }
+}
