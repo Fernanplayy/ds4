@@ -1,6 +1,6 @@
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace Laboratorio_13
 {
@@ -17,8 +17,27 @@ namespace Laboratorio_13
             SqlConnection conexion = new SqlConnection(connectionString);
             conexion.Open();
             MessageBox.Show("Se abrio la conexion con el servidor SQL Server y se selecciono la base de datos");
+
+            SqlCommand query = new SqlCommand("SELECT ProductName FROM [dbo].[Products]", conexion);
+            SqlDataReader lector = query.ExecuteReader();
+
+            while (lector.Read())
+            {
+                listBox1.Items.Add(lector["ProductName"].ToString());
+            }
+
+            lector.Close();
             conexion.Close();
             MessageBox.Show("Se cerro la conexion");
+
+            
+
+            
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
