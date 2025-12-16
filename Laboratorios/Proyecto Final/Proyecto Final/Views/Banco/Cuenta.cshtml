@@ -1,0 +1,156 @@
+﻿@using Proyecto_Final.Models
+@using System.Collections.Generic
+
+
+@{
+    Layout = null;
+    var movs = ViewBag.Movimientos as List<Proyecto_Final.Models.MovimientoViewModel>;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cuenta</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            min-height: 100vh;
+            background: linear-gradient( 180deg, rgba(235, 255, 235, 1) 55%, rgba(178, 235, 189, 1) 99% );
+        }
+
+        /* Barra superior */
+        .top-bar {
+            background: #268F3A;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logout {
+            font-size: 14px;
+            color: #e0ffe5;
+            text-decoration: underline;
+        }
+
+            .logout:hover {
+                color: white;
+            }
+
+        /* Caja blanca */
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+        }
+
+        /* Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background: #268F3A;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #268F3A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="user-info">
+            <span>@Session["Nombre"]</span>
+            <a href="/Banco/Logout" class="logout">Cerrar sesión</a>
+        </div>
+
+        <span>Cuenta: @ViewBag.NumeroCuenta</span>
+    </div>
+
+    <div class="card">
+        <h2>Mi Cuenta</h2>
+
+        <p><strong>Número de cuenta:</strong> @ViewBag.NumeroCuenta</p>
+        <p><strong>Saldo:</strong> $@ViewBag.Saldo</p>
+
+        <h3>Historial de movimientos</h3>
+
+        @if (movs == null || movs.Count == 0)
+        {
+            <p>No hay movimientos registrados.</p>
+        }
+        else
+        {
+            <table>
+                <tr>
+                    <th>Cuenta relacionada</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>Saldo Anterior</th>
+                    <th>Saldo Nuevo</th>
+                </tr>
+
+                @foreach (var m in movs)
+                {
+                    <tr>
+                        <td>@m.NumeroCuenta</td>
+                        <td>@m.NombreUsuario</td>
+                        <td>@m.Tipo</td>
+                        <td>@m.Monto</td>
+                        <td>@m.Fecha</td>
+                        <td>@m.SaldoAnterior</td>
+                        <td>@m.SaldoNuevo</td>
+                    </tr>
+                }
+            </table>
+        }
+
+        <a href="/Banco/Dashboard" class="back-link">Volver al Dashboard</a>
+    </div>
+</body>
+</html>
